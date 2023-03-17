@@ -2,7 +2,7 @@ import {writeFile} from 'fs/promises'
 import { Request, Response } from 'express'
 import Product from '../models/product'
 import ProductService from '../services/productsService'
-//criar novo metodo e nova rota stock value e usando reduce na service, pegar o objeto de estoque e calcular o total de valor_stock
+
 class ProductsController {
     public async createProduct(req: Request, res: Response) {
         await ProductService.createProduct(req.body).then(() => {
@@ -22,6 +22,12 @@ class ProductsController {
         const productStock = await ProductService.listProductStock()
 
         return res.status(200).json(productStock)
+    }
+
+    public async getTotalStockPrice(req: Request, res: Response) {
+        const totalPrice = await ProductService.getStockPrice()
+
+        return res.status(200).json(totalPrice)
     }
 }
 
