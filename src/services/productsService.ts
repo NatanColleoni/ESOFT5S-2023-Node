@@ -16,7 +16,7 @@ class ProductService {
     }
 
     async listProductStock() {
-        const listProduct = await this.listProducts();
+        const listProduct = await this.listProducts()
         const listProductStock = listProduct.map(x => {
             let t = {
                 nome: x.nome,
@@ -28,6 +28,18 @@ class ProductService {
         })
 
         return listProductStock
+    }
+
+    //DESAFIO: criar novo metodo e nova rota stock value e usando reduce na service, pegar o objeto de estoque e calcular o total de valor_stock
+    async getStockPrice() {
+        const estoquePorItem = await this.listProductStock()
+        const totalEstoquePreco = estoquePorItem.reduce((acumulador, valorEstoqueProduto) => {
+            return acumulador + valorEstoqueProduto.valor_estoque
+        }, 0)
+
+        return {
+            valor_estoque: parseFloat(totalEstoquePreco.toFixed(2))
+        }
     }
 }
 
