@@ -2,7 +2,7 @@
 import express from 'express'
 // 23 - Estamos importando a constante routes
 import routes from './routes'
-import mongoose from 'mongoose'
+// import mongoose from 'mongoose'
 
 // 2 - Estamos criando uma classe App, que irá conter as configurações da noss API
 class App {
@@ -34,7 +34,7 @@ class App {
 
     public async database() {
         try{
-            await mongoose.connect('mongodb+srv://natancolleoni:t&ste123@progweb-natancolleoni.drdbmxd.mongodb.net/?retryWrites=true&w=majority')
+            // await mongoose.connect('mongodb+srv://natancolleoni:t&ste123@progweb-natancolleoni.drdbmxd.mongodb.net/?retryWrites=true&w=majority')
             console.log('Successfully connected to database')
         } catch(err) {
             console.error('Connect database failed', err)
