@@ -8,8 +8,8 @@ export default class ArrayRandomValues {
         this.products = arr
     }
 
-    public getRandomValuesFromArray(randomQuantity: any) {
-        if(randomQuantity > this.products.length) return ErrorMessages.INVALID_NUMBER_RANGE
+    public getRandomValuesFromArray(randomQuantity: any) : Array<Product>{
+        // if(randomQuantity > this.products.length) return ErrorMessages.INVALID_NUMBER_RANGE
         let randomProducts: any = []
 
         while(randomProducts.length < randomQuantity) {
@@ -21,7 +21,7 @@ export default class ArrayRandomValues {
         return randomProducts
     }
 
-    public getProductList(): Product[] {
+    public getProductList(): Array<Product> {
         return this.products
     }
 }

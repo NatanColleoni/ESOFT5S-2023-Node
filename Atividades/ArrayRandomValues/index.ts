@@ -1,5 +1,5 @@
-import Product from "./Product"
-import ArrayRandomValues from "./arrayRandomValues";
+import Product from "./src/Product"
+import ArrayRandomValues from "./src/arrayRandomValues";
 
 function main(){
     const productList: Product[] = [
@@ -16,19 +16,18 @@ function main(){
     const randomProducts2 = arrayRandomValues.getRandomValuesFromArray(3)
     const randomProducts3 = arrayRandomValues.getRandomValuesFromArray(5)
 
-
     console.log("\n random 1: ")
-    randomProducts1.foreach(item => {
+    randomProducts1.forEach(item => {
         console.log(item.getName())
     })
 
     console.log("\n random 2: ")
-    randomProducts2.foreach(item => {
+    randomProducts2.forEach(item => {
         console.log(item.getName())
     })
 
     console.log("\n random 3: ")
-    randomProducts3.foreach(item => {
+    randomProducts3.forEach(item => {
         console.log(item.getName())
     })
 }
