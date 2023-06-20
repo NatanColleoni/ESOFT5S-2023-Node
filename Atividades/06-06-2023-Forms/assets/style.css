@@ -48,3 +48,30 @@ th {
 tr:nth-child(even) {
     background-color: #f9f9f9;
 }
+
+
+.table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-top: 50%;
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  .table thead tr {
+    background-color: #009879;
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+    border-radius:  50%;
+  }
+  
+  .table th,
+  .table td {
+    padding: 12px 15px;
+  }
+  
+  .table tbody tr {
+    border-bottom: 1px solid #ddd;
+  }
